@@ -88,19 +88,40 @@
             <li><strong>Glenrock Apartments:</strong> Reached 80% by 1 PM on Day 1, filled by 10 AM on Day 2</li>
         </ul>
 
+        <p>This pattern reveals a counterintuitive finding: the newest, most modern buildings were among the last to fill. Laurel, Tipuana, and Palo Verde—all built in 2022—took nearly a week to reach 80% capacity, while the oldest building, Landfair (built in 1956), filled within hours. Statistical analysis confirms this age paradox: a strong positive correlation (0.81) between building age and fill speed shows that newer apartments filled slower, not faster. This suggests students prioritized location over modern amenities—the older buildings happened to be closer to campus.</p>
+
         <p>By contrast, only 5 of the 14 on-campus residence halls reached the 80% threshold during the tracked period, and none filled completely. Students targeting traditional dorms had significantly more time to deliberate.</p>
 
-        <h2>What Drove Demand? Location, Location, Location</h2>
+        <h2>Key Drivers of Demand: Distance vs. Amenities</h2>
 
-        <p>For university apartments, distance from campus proved to be the dominant factor in filling speed. Statistical analysis revealed a moderate positive correlation (Spearman correlation: 0.56) between proximity to campus and how quickly apartments filled—meaning closer apartments filled faster.</p>
+        <p>For university apartments, distance from campus proved to be the dominant factor in filling speed. Statistical analysis revealed a moderate positive correlation (Spearman correlation: 0.56) between proximity to campus and how quickly apartments filled—meaning closer apartments filled faster. The pattern was clear: Landfair Vista, Landfair, and Glenrock apartments, all within a few blocks of campus, vanished almost immediately. Meanwhile, Laurel and Palo Verde, situated farther from the academic core, took nearly a week to reach 80% capacity.</p>
 
-        <p>The pattern was clear: Landfair Vista, Landfair, and Glenrock apartments, all within a few blocks of campus, vanished almost immediately. Meanwhile, Laurel and Palo Verde, situated farther from the academic core, took nearly a week to reach 80% capacity.</p>
+        <p>However, initial analysis suggested other factors might be at play. Multivariable regression was used to isolate the independent effects of distance, building age, room density, and amenities like parking, air conditioning, and exercise rooms.</p>
+
+        <h3>The Parking Factor</h3>
+
+        <p>Parking initially appeared to be a major driver of demand, with a regression model showing an R² of approximately 0.56. However, when controlling for distance in a multivariable regression, parking's effect became statistically insignificant (p=0.67). This revealed that parking was actually a proxy for location—the buildings closest to campus happened to have parking, but students weren't chasing cars; they were chasing proximity. The apparent parking preference was simply correlation, not causation.</p>
+
+        <h3>Room Density & The "Crowding" Trade-off</h3>
+
+        <p>Initial analysis showed a strong positive correlation (0.72) between room density and fill order, suggesting students were avoiding higher-density rooms. However, this finding was "guilt by association." The densest buildings, like Gayley Heights with an average of 2.95 people per room, are located furthest from campus. When controlling for distance, the relationship reversed: students actually preferred higher-density options over lower-density ones at the same distance.</p>
+
+        <figure>
+            <div id="scatter-plot"></div>
+            <figcaption>When controlling for distance, higher-density rooms (blue dots) filled faster than lower-density rooms (grey dots) at similar distances from campus, suggesting students prefer density when location is equal. Hover over points to see building details.</figcaption>
+        </figure>
 
         <p>Interestingly, on-campus housing showed a weak negative correlation (-0.30) with distance to the campus centroid. This suggests that for residence halls, other factors—possibly social reputation, building amenities, or community culture—played a larger role than mere proximity to classes.</p>
+
+        <h2>Fastest Selling Unit</h2>
+
+        <p>The 2 Bd+Loft/6 Person configuration emerged as the "unicorn" unit, filling completely by 10 AM on Day 1—just one hour after the portal opened. This room type was the first to reach both 80% capacity and 100% capacity across all housing options, suggesting it struck an optimal balance of space, affordability, and location that made it irresistible to students.</p>
 
         <h2>Methodology</h2>
 
         <p>Data was collected hourly from the UCLA housing portal during the enrollment period from February 18 to March 4, 2025. The analysis tracked 17,514 total bed spaces across 14 on-campus housing locations and 12 university apartment complexes. Availability data was normalized to show percentage remaining to allow for fair comparison between facilities of different sizes.</p>
+
+        <p>To isolate the independent effects of various factors, multivariable ordinary least squares (OLS) regression was employed. This statistical technique allowed us to control for confounding variables—for example, determining whether parking truly influenced demand or was merely correlated with proximity to campus. By including distance, building age, room density, and amenities (parking, air conditioning, exercise rooms) as simultaneous predictors, the regression model revealed that distance was the primary driver, with other factors serving as proxies for location rather than independent preferences.</p>
     </article>
     
     <div class="tooltip" id="tooltip"></div>

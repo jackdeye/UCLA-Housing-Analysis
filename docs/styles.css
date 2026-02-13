@@ -268,3 +268,50 @@ select {
     text-align: right;
 }
 
+figure {
+    margin: 2em 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5em;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#scatter-plot {
+    width: 100%;
+    margin: 2em 0;
+    background: #fafafa;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.scatter-tooltip {
+    line-height: 1.6;
+}
+
+.scatter-tooltip strong {
+    color: #FFD100;
+    font-size: 14px;
+}
+
+.grid line {
+    stroke: #ccc;
+    stroke-opacity: 0.5;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+

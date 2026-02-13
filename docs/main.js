@@ -2,6 +2,7 @@
 import { colors } from './config.js';
 import { FilterManager } from './filters.js';
 import { ChartRenderer } from './chart.js';
+import { ScatterPlot } from './scatter.js';
 
 let housingData = {};
 let filterManager;
@@ -20,6 +21,15 @@ d3.json('housing_data.json').then(data => {
     filterManager.initialize();
     populateDropdown();
     setupEventListeners();
+});
+
+// Load and render scatter plot
+d3.json('scatter_data.json').then(data => {
+    const scatterPlot = new ScatterPlot('scatter-plot', data);
+    scatterPlot.render();
+}).catch(err => {
+    console.error('Error loading scatter plot data:', err);
+    d3.select('#scatter-plot').html('<p style="color: #999; font-style: italic;">Scatter plot data not available. Run scripts/generate_scatter_data.py to generate the data.</p>');
 });
 
 function setupEventListeners() {
