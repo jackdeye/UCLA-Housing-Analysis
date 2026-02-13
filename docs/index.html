@@ -20,7 +20,7 @@
         <h2>About the Data</h2>
         <p>The author scraped UCLA's housing availability spreadsheet every hour it was updated for the two weeks the portal was open. The geographical data was collected by manually labeling buildings on Google Earth, and data regarding amenities for each housing option was provided by the UCLA housing website.</p>
 
-        <div class="viz-section">
+         <div class="viz-section">
             <h3>Interactive Visualization</h3>
             <p class="viz-intro">Explore how different housing options filled up over time. Select combinations below to compare availability trends across buildings, gender designations, and room types.</p>
             
@@ -69,8 +69,8 @@
             <div id="chart"></div>
             <div class="zoom-hint">Tip: Scroll to zoom the timeline, drag to pan left/right.</div>
         </div>
-        
-        <h2>The Critical 50% Threshold</h2>
+
+           <h2>The Critical 50% Threshold</h2>
 
         <p>The tipping point came faster than many students expected. Between 11 AM and noon on February 20—just two days after applications opened—UCLA housing crossed the effective 50% capacity mark. Students who hesitated past that Thursday morning found their options significantly narrowed.</p>
 
@@ -102,15 +102,28 @@
 
         <p>Parking initially appeared to be a major driver of demand, with a regression model showing an R² of approximately 0.56. However, when controlling for distance in a multivariable regression, parking's effect became statistically insignificant (p=0.67). This revealed that parking was actually a proxy for location—the buildings closest to campus happened to have parking, but students weren't chasing cars; they were chasing proximity. The apparent parking preference was simply correlation, not causation.</p>
 
-        <h3>Room Density & The "Crowding" Trade-off</h3>
-
-        <p>Initial analysis showed a strong positive correlation (0.72) between room density and fill order, suggesting students were avoiding higher-density rooms. However, this finding was "guilt by association." The densest buildings, like Gayley Heights with an average of 2.95 people per room, are located furthest from campus. When controlling for distance, the relationship reversed: students actually preferred higher-density options over lower-density ones at the same distance.</p>
-
-        <figure>
-            <div id="scatter-plot"></div>
-            <figcaption>When controlling for distance, higher-density rooms (blue dots) filled faster than lower-density rooms (grey dots) at similar distances from campus, suggesting students prefer density when location is equal. Hover over points to see building details.</figcaption>
-        </figure>
-
+       <section id="scatter-analysis" class="visualization-section">
+    <h2>Interactive Scatter Analysis</h2>
+    <p class="section-description">
+        Explore relationships between housing characteristics. 
+        Select variables to see correlations and regression analysis.
+    </p>
+    
+    <!-- Controls -->
+    <div class="scatter-controls">
+        <div class="control-group">
+            <label for="scatter-x">X-Axis:</label>
+            <select id="scatter-x"></select>
+        </div>
+        <div class="control-group">
+            <label for="scatter-y">Y-Axis:</label>
+            <select id="scatter-y"></select>
+        </div>
+    </div>
+    
+    <!-- Scatter Plot Container -->
+    <div id="scatter-plot"></div>
+    </section>
         <p>Interestingly, on-campus housing showed a weak negative correlation (-0.30) with distance to the campus centroid. This suggests that for residence halls, other factors—possibly social reputation, building amenities, or community culture—played a larger role than mere proximity to classes.</p>
 
         <h2>Fastest Selling Unit</h2>
@@ -125,7 +138,35 @@
     </article>
     
     <div class="tooltip" id="tooltip"></div>
-
+    <script type="module">
+    import { renderScatterPlot, setupScatterControls } from './scatter.js';
+    
+        // Load data from scatter_data.json
+        fetch('scatter_data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Could not load scatter_data.json');
+                }
+                return response.json();
+            })
+            .then(scatterData => {
+                // Setup dropdowns and render plot
+                setupScatterControls(scatterData);
+                renderScatterPlot('scatter-plot', scatterData);
+            })
+            .catch(error => {
+                console.error('Error loading scatter data:', error);
+                document.getElementById('scatter-plot').innerHTML = `
+                    <div style="padding: 40px; text-align: center; background: #fff3cd; border: 2px solid #ffc107; border-radius: 8px;">
+                        <h3 style="color: #856404; margin-top: 0;">⚠️ Data Loading Error</h3>
+                        <p style="color: #856404;">Could not load scatter_data.json</p>
+                        <p style="color: #666; font-size: 14px;">
+                            Make sure scatter_data.json exists in your docs/ folder.
+                        </p>
+                    </div>
+                `;
+            });
+    </script>
     <script type="module" src="config.js"></script>
     <script type="module" src="filters.js"></script>
     <script type="module" src="chart.js"></script>

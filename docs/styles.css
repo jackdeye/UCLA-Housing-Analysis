@@ -315,3 +315,66 @@ figcaption {
     stroke-width: 0;
 }
 
+/* ============================================
+   SCATTER PLOT STYLES
+   Add these to your existing styles.css
+   ============================================ */
+
+.scatter-controls {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.control-group select {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.control-group select:hover {
+    border-color: #999;
+}
+
+.control-group select:focus {
+    outline: none;
+    border-color: #2774AE; /* UCLA Blue */
+}
+
+#scatter-plot {
+    margin: 20px 0;
+    background: white;
+    border-radius: 4px;
+}
+
+.scatter-tooltip {
+    opacity: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 250px;
+}
