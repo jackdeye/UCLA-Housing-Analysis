@@ -1,4 +1,4 @@
-# UCLA Housing Rush Analysis
+# [UCLA Housing Rush Analysis](https://jackdeye.github.io/UCLA-Housing-Analysis/)
 
 An interactive data visualization and analysis project tracking how 17,500 UCLA housing beds disappeared in just two weeks during the 2025 enrollment period.
 
@@ -220,3 +220,4 @@ This project is provided as-is for educational and research purposes.
 ---
 
 *Data analysis and visualization | February-March 2025*
+
