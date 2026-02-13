@@ -23,26 +23,47 @@ The interactive visualization can be hosted on GitHub Pages. After setting up (s
 
 ```
 box_data/
-├── docs/                          # GitHub Pages website (final_draft)
+├── docs/                          # GitHub Pages website
 │   ├── index.html                 # Main visualization page
-│   ├── housing_data.json          # Processed housing data
+│   ├── housing_data.json          # Processed housing data (for web)
 │   ├── main.js                    # Application orchestration
 │   ├── chart.js                   # D3.js chart rendering
 │   ├── filters.js                 # Filter management
 │   ├── config.js                  # Configuration constants
 │   └── styles.css                 # Styling
-├── data/                          # Raw and processed data files
-│   ├── housing_timeseries.csv     # Time series data
-│   ├── housing_timeseries_normalized.csv
-│   └── downloaded_file_*.csv      # Hourly scraped data
-├── correlation_testing/           # Statistical analysis scripts
-│   ├── correlation_script.py      # Correlation analysis
+├── scripts/                       # Analysis and processing scripts
+│   ├── query.py                   # Example data query script
+│   ├── stacked_plot.py            # Velocity chart generation
+│   ├── race_chart.py              # Race chart visualization
+│   ├── copy_json.py               # Utility to copy data for GitHub Pages
+│   └── test*.py                   # Test/exploratory scripts
+├── data/                          # Data files
+│   ├── downloaded_file_*.csv     # Raw hourly scraped data
+│   ├── housing_timeseries.csv     # Combined time series data
+│   └── processed/                 # Processed/derived data files
+│       ├── housing_timeseries_condensed.csv
+│       ├── housing_timeseries_normalized.csv
+│       ├── Availability_By_Building.csv
+│       ├── Availability_By_RoomType.csv
+│       ├── housing_distance_analysis.csv
+│       ├── Total_Availability_Over_Time.csv
+│       └── housing_data.json      # JSON format for web visualization
+├── analysis/                      # Statistical analysis scripts
+│   ├── correlation_script.py     # Correlation analysis
 │   ├── geo_dist.py                # Geographic distance calculations
-│   └── multivariable_regression.py
+│   ├── multivariable_regression.py
+│   └── *.csv                      # Analysis intermediate data
 ├── figures/                       # Generated visualization images
-├── query.py                       # Example data query script
-├── stacked_plot.py                # Velocity chart generation
-├── race_chart.py                  # Race chart visualization
+│   ├── housing_velocity_by_building.png
+│   ├── housing_velocity_by_room_type.png
+│   └── ...
+├── archive/                       # Old/draft files
+│   ├── final_draft/               # Original draft files
+│   ├── housing_viz.html          # Old visualization
+│   └── housing_race_chart.png    # Old chart
+├── notes/                         # Documentation and notes
+│   └── general_notes.txt          # Project notes and findings
+├── README.md                      # This file
 └── requirements.txt               # Python dependencies
 ```
 
@@ -70,6 +91,7 @@ box_data/
 
 #### Example: Query Housing Data
 ```bash
+cd scripts
 python query.py
 ```
 
@@ -77,14 +99,15 @@ This script demonstrates how to query the housing timeseries data for specific b
 
 #### Generate Velocity Charts
 ```bash
+cd scripts
 python stacked_plot.py
 ```
 
-Generates velocity charts showing how quickly different housing options filled up.
+Generates velocity charts showing how quickly different housing options filled up. Outputs are saved to the `figures/` directory.
 
 #### Run Correlation Analysis
 ```bash
-cd correlation_testing
+cd analysis
 python correlation_script.py
 ```
 
@@ -96,16 +119,17 @@ Analyzes correlations between geographic distance and housing fill rates.
 
 1. **Copy the housing data JSON file:**
    ```bash
+   cd scripts
    python copy_json.py
    ```
    
-   This will copy `final_draft/housing_data.json` to `docs/housing_data.json`. 
+   This will copy `data/processed/housing_data.json` to `docs/housing_data.json`. 
    
    Alternatively, you can manually copy the file:
    ```bash
-   cp final_draft/housing_data.json docs/housing_data.json
+   cp data/processed/housing_data.json docs/housing_data.json
    ```
-   (On Windows: `copy final_draft\housing_data.json docs\housing_data.json`)
+   (On Windows: `copy data\processed\housing_data.json docs\housing_data.json`)
 
 2. **Commit and push the docs folder to GitHub:**
    ```bash
@@ -127,6 +151,7 @@ Analyzes correlations between geographic distance and housing fill rates.
 
 1. **First, ensure the JSON file is in the docs folder:**
    ```bash
+   cd scripts
    python copy_json.py
    ```
 
@@ -196,4 +221,3 @@ This project is provided as-is for educational and research purposes.
 ---
 
 *Data analysis and visualization | February-March 2025*
-
