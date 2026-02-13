@@ -77,7 +77,7 @@ box_data/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/[YOUR_USERNAME]/box_data.git
+   git clone https://github.com/jackdeye/box_data.git
    cd box_data
    ```
 
@@ -111,40 +111,6 @@ python correlation_script.py
 ```
 
 Analyzes correlations between geographic distance and housing fill rates.
-
-### Setting Up GitHub Pages
-
-**Important:** Before enabling GitHub Pages, you need to copy the housing data JSON file to the docs folder.
-
-1. **Copy the housing data JSON file:**
-   ```bash
-   cd scripts
-   python copy_json.py
-   ```
-   
-   This will copy `data/processed/housing_data.json` to `docs/housing_data.json`. 
-   
-   Alternatively, you can manually copy the file:
-   ```bash
-   cp data/processed/housing_data.json docs/housing_data.json
-   ```
-   (On Windows: `copy data\processed\housing_data.json docs\housing_data.json`)
-
-2. **Commit and push the docs folder to GitHub:**
-   ```bash
-   git add docs/
-   git commit -m "Add GitHub Pages website"
-   git push
-   ```
-
-3. **Enable GitHub Pages:**
-   - Go to your repository on GitHub
-   - Click on "Settings" (top menu)
-   - Navigate to "Pages" in the left sidebar
-   - Under "Source", select "Deploy from a branch"
-   - Choose "main" (or "master") branch and `/docs` folder
-   - Click "Save"
-   - Your site will be available at `https://jackdeye.github.io/box_data/` within a few minutes
 
 ### Viewing the Interactive Visualization Locally
 
@@ -220,5 +186,6 @@ This project is provided as-is for educational and research purposes.
 ---
 
 *Data analysis and visualization | February-March 2025*
+
 
 
