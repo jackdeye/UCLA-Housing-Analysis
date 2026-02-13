@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>All Housing+Dining+UCLA</name>
+	<gx:CascadingStyle kml:id="__managed_style_33AA58CA523C785B748C">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_2CA36DC1213C785B748C">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_12A0530AF93C785B748C">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_2CA36DC1213C785B748C</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_33AA58CA523C785B748C</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="081D25FC183C785B7478">
+		<name>The Study</name>
+		<LookAt>
+			<longitude>-118.4520558251975</longitude>
+			<latitude>34.07329418474347</latitude>
+			<altitude>167.7333447713549</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>161.29599656535</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4521158935976,34.07320838091271,165.9072785490669</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="062D5101523C785C2B89">
+		<name>Rende</name>
+		<LookAt>
+			<longitude>-118.4520287233597</longitude>
+			<latitude>34.07251587157398</latitude>
+			<altitude>154.1350331682024</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>390.1075056721311</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4519202455768,34.07251465722535,154.1169668972155</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04ED14405C3C785CD93C">
+		<name>Feast</name>
+		<LookAt>
+			<longitude>-118.4518001587488</longitude>
+			<latitude>34.07217262357683</latitude>
+			<altitude>154.6197832768638</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>258.8383672085547</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4513167102337,34.07179335678097,178.6734922044441</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EF64B9C343C785F5104">
+		<name>Bplate</name>
+		<LookAt>
+			<longitude>-118.4498815564462</longitude>
+			<latitude>34.07180229805034</latitude>
+			<altitude>147.5829067768722</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>118.9483786071105</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4498676111905,34.07179113174956,142.8216822483909</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07EFFC23593C78600998">
+		<name>Bcafe</name>
+		<LookAt>
+			<longitude>-118.4500449175979</longitude>
+			<latitude>34.07268863418263</latitude>
+			<altitude>147.2370316489857</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>134.3416537451048</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4503596118357,34.07268388644795,142.9205716730083</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01783D22363C78603E2B">
+		<name>Epic</name>
+		<LookAt>
+			<longitude>-118.4500668731763</longitude>
+			<latitude>34.07280997963107</latitude>
+			<altitude>139.8116816730174</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>47.15650047900454</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4500826888699,34.07283007707073,139.138439559317</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E2A5D0D633C7860ACFB">
+		<name>De Neve</name>
+		<LookAt>
+			<longitude>-118.4503291318735</longitude>
+			<latitude>34.07067681961478</latitude>
+			<altitude>128.7003764720133</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>123.8590745274632</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4501049335186,34.07049570666756,141.1520158692881</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F60CA38603C786C2E4E">
+		<name>Dykstra Hall</name>
+		<LookAt>
+			<longitude>-118.4498841707307</longitude>
+			<latitude>34.07056588001223</latitude>
+			<altitude>127.9960519201439</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>488.9655295653938</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4500583124673,34.07001291819921,162.5903143428996</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00FF18104E3C786CFAFC">
+		<name>De Neve Plaza</name>
+		<LookAt>
+			<longitude>-118.4500049933229</longitude>
+			<latitude>34.07030432564366</latitude>
+			<altitude>140.118174143845</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>195.646543117291</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4501755014277,34.07035878685829,143.4828013147851</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07791156573C786DAACF">
+		<name>De Neve Residence Hall</name>
+		<LookAt>
+			<longitude>-118.4501830891638</longitude>
+			<latitude>34.07076636850864</latitude>
+			<altitude>128.614161374695</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>404.2068102042687</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4506517317315,34.07081757168734,150.236340375423</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0684D7C1A13C786E5741">
+		<name>Hedrick Hall</name>
+		<LookAt>
+			<longitude>-118.4522564800366</longitude>
+			<latitude>34.07331438095967</latitude>
+			<altitude>188.0212507839987</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>232.4411443441205</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4523286831588,34.07327094942379,191.7075959172554</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D7D22329E3C786ECF88">
+		<name>Hitch Suites</name>
+		<LookAt>
+			<longitude>-118.4530826823585</longitude>
+			<latitude>34.07390616987296</latitude>
+			<altitude>162.4381863516785</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>397.7751654475287</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4537068461324,34.07352742057159,164.7757571667065</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F92D9D16E3C786F5FB4">
+		<name>Olympic / Centennial</name>
+		<LookAt>
+			<longitude>-118.4530563431292</longitude>
+			<latitude>34.07246968397634</latitude>
+			<altitude>155.4266802791387</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>298.3250466010213</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.453402308269,34.07230237234933,178.0854186113717</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04FB0850783C786FD4B1">
+		<name>Rieber Terrace</name>
+		<LookAt>
+			<longitude>-118.4524118304216</longitude>
+			<latitude>34.07261286753338</latitude>
+			<altitude>181.0090486973736</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>247.8982853571506</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4521474068572,34.0726060697604,186.2468538729924</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02D52C5A183C78706687">
+		<name>Rieber Vista</name>
+		<LookAt>
+			<longitude>-118.4520638095252</longitude>
+			<latitude>34.07215560088556</latitude>
+			<altitude>180.8224990017563</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>248.084818676798</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4521132499165,34.07210327185714,185.2453129120412</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B1C3FCF3E3C7870AD6C">
+		<name>Rieber Hall</name>
+		<LookAt>
+			<longitude>-118.4516462785776</longitude>
+			<latitude>34.07212118494895</latitude>
+			<altitude>180.0653820930958</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>248.8419149598849</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4515653086665,34.07200304998104,184.0344001034988</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="001E39A4F73C78714CF6">
+		<name>Saxon Suites</name>
+		<LookAt>
+			<longitude>-118.4530318210763</longitude>
+			<latitude>34.07176334758621</latitude>
+			<altitude>159.369845813575</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>364.7995604448079</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4530208578287,34.07161237169124,159.4585045801953</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E228033E13C78727C48">
+		<name>Sproul Landing</name>
+		<LookAt>
+			<longitude>-118.45013789246</longitude>
+			<latitude>34.07154563294608</latitude>
+			<altitude>165.7878019585044</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>285.6693588450071</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4501400389284,34.07152518529131,165.8239450877069</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A1436DE7E3C7872E120">
+		<name>Hedrick Summit</name>
+		<LookAt>
+			<longitude>-118.4519937318675</longitude>
+			<latitude>34.0739257115116</latitude>
+			<altitude>169.4894971076755</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>537.5074420741294</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.452683331741,34.07394991312835,188.5744715260384</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D892AB3C23C7873680C">
+		<name>Sunset Village</name>
+		<LookAt>
+			<longitude>-118.4499395310117</longitude>
+			<latitude>34.07372440129773</latitude>
+			<altitude>152.5862069960342</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>392.6666371278408</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4507927393866,34.07367426706524,152.4127109883184</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09DB1C58D23C78746DF6">
+		<name>Sproul Hall</name>
+		<LookAt>
+			<longitude>-118.4504093469666</longitude>
+			<latitude>34.07228956702932</latitude>
+			<altitude>148.0042877925759</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>300.5491690355848</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4501446120297,34.07220133738488,173.340271752916</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08A0461AD53C787ADC80">
+		<name>Gayley Court Apartment</name>
+		<LookAt>
+			<longitude>-118.4483267100408</longitude>
+			<latitude>34.06503175693931</latitude>
+			<altitude>123.8294772451835</altitude>
+			<heading>359.9998460709338</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>351.8507919448894</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4481648701845,34.06500941242744,121.0632962103032</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09A3C907633C787BD313">
+		<name>Gayley Heights</name>
+		<LookAt>
+			<longitude>-118.4485993757027</longitude>
+			<latitude>34.06388820431818</latitude>
+			<altitude>154.1792954257387</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>200.4256713948781</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4486878867758,34.06398496754105,154.3008208331862</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="092AF14F403C79B0F919">
+		<name>Glenrock West Apartments</name>
+		<LookAt>
+			<longitude>-118.4510073367203</longitude>
+			<latitude>34.06691474721193</latitude>
+			<altitude>123.5973396023814</altitude>
+			<heading>7.206386686952071</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>495.4787131166813</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4512054510271,34.06669360796076,140.1567726358331</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01D477718E3C79B2CAC4">
+		<name>Glenrock Apartments</name>
+		<LookAt>
+			<longitude>-118.4505408698805</longitude>
+			<latitude>34.06679013809527</latitude>
+			<altitude>125.2253055913674</altitude>
+			<heading>21.34005719843983</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>147.3443101635348</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4506820977362,34.06675950808474,121.6335595087724</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="056CE182073C79B786E0">
+		<name>Laurel</name>
+		<LookAt>
+			<longitude>-118.4496816312461</longitude>
+			<latitude>34.06298847799903</latitude>
+			<altitude>143.3522764843303</altitude>
+			<heading>10.2773532752576</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>402.9413132792251</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4498436319048,34.06256836218125,113.8081745711789</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B9F53A82E3C79BA47D6">
+		<name>Landfair Apartments</name>
+		<LookAt>
+			<longitude>-118.4488541820242</longitude>
+			<latitude>34.06655873665948</latitude>
+			<altitude>110.4160418425446</altitude>
+			<heading>198.4804733589969</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>500.0437267313828</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.44907581465,34.06644460515076,110.7189065409212</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0941D85B6C3C79BC800F">
+		<name>Levering Terrace Apartments</name>
+		<LookAt>
+			<longitude>-118.4493421518599</longitude>
+			<latitude>34.06330752730873</latitude>
+			<altitude>124.9523565998932</altitude>
+			<heading>198.4791549693818</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>206.0828598466105</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4493896080478,34.06338140194291,124.6021929187034</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03DBD4F5093C79BE73B0">
+		<name>Palo Verde</name>
+		<LookAt>
+			<longitude>-118.450545331516</longitude>
+			<latitude>34.06286091003992</latitude>
+			<altitude>137.2896236886148</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>209.6816920544006</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4505073417739,34.0628464330811,137.1963100143662</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A9E9FBB513C79BF7D06">
+		<name>Tipuana</name>
+		<LookAt>
+			<longitude>-118.4499467856581</longitude>
+			<latitude>34.06315980738476</latitude>
+			<altitude>119.4712346993347</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>539.6243449340545</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4499692380641,34.06312725741321,142.5154868155315</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00C4381C9E3C79C04558">
+		<name>Westwood Chateau Apartments</name>
+		<LookAt>
+			<longitude>-118.4516307003773</longitude>
+			<latitude>34.06941660200197</latitude>
+			<altitude>156.9003216122853</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>223.9215687266551</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4516128562886,34.06938771123549,156.9003072917996</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00D103668B3C79C100C7">
+		<name>Westwood Palms Apartments</name>
+		<LookAt>
+			<longitude>-118.4519905692168</longitude>
+			<latitude>34.07004710735863</latitude>
+			<altitude>143.0168643308301</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>168.174331605751</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Point>
+			<coordinates>-118.4520185960018,34.07005770603784,142.9872870332883</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="07B8CED5783C79C60BFF">
+		<name>UCLA Campus</name>
+		<LookAt>
+			<longitude>-118.439901781343</longitude>
+			<latitude>34.07602006373428</latitude>
+			<altitude>151.2333280655748</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>2495.475013461546</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_12A0530AF93C785B748C</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-118.4447499889822,34.07092462469271,0 -118.444932804396,34.06702553089319,0 -118.4408065860793,34.06715098256328,0 -118.4394635879785,34.07209912653374,0 -118.4378732828611,34.0721764776311,0 -118.4392280254179,34.07663071877803,0 -118.4409343690262,34.07661687065637,0 -118.4444343652862,34.07392326364629,0 -118.4447499889822,34.07092462469271,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

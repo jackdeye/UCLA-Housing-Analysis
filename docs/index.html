@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCLA Housing Rush: How 17,500 Beds Vanished in Two Weeks</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <article>
+        <h1>UCLA Housing Rush: How 17,500 Beds Vanished in Two Weeks</h1>
+        <p class="subtitle">Tracking the rapid disappearance of UCLA housing availability during the 2025 enrollment period</p>
+        <p class="byline">Data analysis and visualization | February-March 2025</p>
+        
+        <p>Housing sign-ups can be disorganized and stressful. Some students have aspirations to live in a specific housing arrangement, such as a university apartment, with their friends, only to find that all the options were taken by their sign-up time. To many, the housing sign-ups feel like a chaotic lottery. </p>
+
+        <p>Starting at 9 AM on February 18, 2025, UCLA opened its housing portal for the upcoming academic year. Within seven hours that first day, over 3,000 bed spaces disappeared. By the time the dust settled two weeks later, more than 70% of UCLA's 17,514 available housing spots had been claimed.</p>
+
+        <h2>About the Data</h2>
+        <p>The author scraped UCLA's housing availability spreadsheet every hour it was updated for the two weeks the portal was open. The geographical data was collected by manually labeling buildings on Google Earth, and data regarding amenities for each housing option was provided by the UCLA housing website.</p>
+
+        <div class="viz-section">
+            <h3>Interactive Visualization</h3>
+            <p class="viz-intro">Explore how different housing options filled up over time. Select combinations below to compare availability trends across buildings, gender designations, and room types.</p>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>Data View:</label>
+                    <div class="toggle-container">
+                        <label class="radio-label">
+                            <input type="radio" name="viewMode" value="normalized" checked> 
+                            Normalized (Percent Left)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="viewMode" value="absolute"> 
+                            Absolute (Number of Beds)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Housing Type:</label>
+                    <div class="pill-container" id="housing-type-filters"></div>
+                </div>
+
+                <div class="control-group">
+                    <label>Filter By:</label>
+                    <div class="pill-container" id="gender-filters"></div>
+                </div>
+
+                <div class="control-group">
+                    <label for="building-select">Building:</label>
+                    <select id="building-select">
+                        <option value="">All Buildings</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="combo-select">Add to Chart:</label>
+                    <select id="combo-select">
+                        <option value="">Select a housing option...</option>
+                    </select>
+                </div>
+                
+                <div class="selected-items" id="selected-items"></div>
+            </div>
+            
+            <div id="chart"></div>
+            <div class="zoom-hint">Tip: Scroll to zoom the timeline, drag to pan left/right.</div>
+        </div>
+        
+        <h2>The Critical 50% Threshold</h2>
+
+        <p>The tipping point came faster than many students expected. Between 11 AM and noon on February 20—just two days after applications opened—UCLA housing crossed the effective 50% capacity mark. Students who hesitated past that Thursday morning found their options significantly narrowed.</p>
+
+        <p>The pace was relentless during those first four days. From February 18-21, availability plummeted from 17,514 beds to just 7,254—a loss of nearly 10,300 spaces at an average rate of more than 100 beds per hour during business hours.</p>
+
+
+        <h2>University Apartments: The Early Casualties</h2>
+
+        <p>While on-campus residence halls offered students some breathing room, university apartments told a different story. Of the 12 apartment complexes analyzed, 10 reached 80% capacity within the first week, and 7 filled completely.</p>
+
+        <p><strong>The fastest to fill:</strong></p>
+        <ul>
+            <li><strong>Landfair Vista Apartments:</strong> 80% full by 11 AM on Day 1, completely filled by 3 PM</li>
+            <li><strong>Landfair Apartments:</strong> Hit 80% capacity by 11 AM on Day 1, gone by 4 PM</li>
+            <li><strong>Glenrock Apartments:</strong> Reached 80% by 1 PM on Day 1, filled by 10 AM on Day 2</li>
+        </ul>
+
+        <p>By contrast, only 5 of the 14 on-campus residence halls reached the 80% threshold during the tracked period, and none filled completely. Students targeting traditional dorms had significantly more time to deliberate.</p>
+
+        <h2>What Drove Demand? Location, Location, Location</h2>
+
+        <p>For university apartments, distance from campus proved to be the dominant factor in filling speed. Statistical analysis revealed a moderate positive correlation (Spearman correlation: 0.56) between proximity to campus and how quickly apartments filled—meaning closer apartments filled faster.</p>
+
+        <p>The pattern was clear: Landfair Vista, Landfair, and Glenrock apartments, all within a few blocks of campus, vanished almost immediately. Meanwhile, Laurel and Palo Verde, situated farther from the academic core, took nearly a week to reach 80% capacity.</p>
+
+        <p>Interestingly, on-campus housing showed a weak negative correlation (-0.30) with distance to the campus centroid. This suggests that for residence halls, other factors—possibly social reputation, building amenities, or community culture—played a larger role than mere proximity to classes.</p>
+
+        <h2>Methodology</h2>
+
+        <p>Data was collected hourly from the UCLA housing portal during the enrollment period from February 18 to March 4, 2025. The analysis tracked 17,514 total bed spaces across 14 on-campus housing locations and 12 university apartment complexes. Availability data was normalized to show percentage remaining to allow for fair comparison between facilities of different sizes.</p>
+    </article>
+    
+    <div class="tooltip" id="tooltip"></div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="filters.js"></script>
+    <script type="module" src="chart.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+

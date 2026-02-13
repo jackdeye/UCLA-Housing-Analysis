@@ -1,0 +1,171 @@
+Building,Building Abbreviation,Room Type,Room Assignment Gender,Available Bed Spaces,Last Updated
+De Neve Plaza,DEN,Plaza Triple/Private Bath,Female,206,3/3/2025 14:00
+De Neve Plaza,DEN,Plaza Triple/Private Bath,Gender Inclusive,6,3/3/2025 14:00
+De Neve Plaza,DEN,Plaza Triple/Private Bath,Male,29,3/3/2025 14:00
+De Neve Plaza,DEN,Plaza Triple/Private Bath,Non-Binary,0,3/3/2025 14:00
+De Neve Residence Hall,DN,Deluxe Triple,Female,15,3/3/2025 14:00
+De Neve Residence Hall,DN,Deluxe Triple,Gender Inclusive,3,3/3/2025 14:00
+De Neve Residence Hall,DN,Deluxe Triple,Male,2,3/3/2025 14:00
+Dykstra Hall,DYK,Classic Triple,Female,324,3/3/2025 14:00
+Dykstra Hall,DYK,Classic Triple,Gender Inclusive,26,3/3/2025 14:00
+Dykstra Hall,DYK,Classic Triple,Male,194,3/3/2025 14:00
+Hedrick Hall,HED,Classic Triple,Female,542,3/3/2025 14:00
+Hedrick Hall,HED,Classic Triple,Gender Inclusive,48,3/3/2025 14:00
+Hedrick Hall,HED,Classic Triple,Male,357,3/3/2025 14:00
+Hitch Suites,HIT,Suite Triple/Shared Bath,Female,117,3/3/2025 14:00
+Hitch Suites,HIT,Suite Triple/Shared Bath,Gender Inclusive,1,3/3/2025 14:00
+Hitch Suites,HIT,Suite Triple/Shared Bath,Male,0,3/3/2025 14:00
+Olympic / Centennial,OC,Deluxe Triple,Female,23,3/3/2025 14:00
+Olympic / Centennial,OC,Deluxe Triple,Gender Inclusive,12,3/3/2025 14:00
+Olympic / Centennial,OC,Deluxe Triple,Male,0,3/3/2025 14:00
+Olympic / Centennial,OC,Deluxe Triple,Non-Binary,0,3/3/2025 14:00
+Rieber Hall,RIE,Classic Triple,Female,477,3/3/2025 14:00
+Rieber Hall,RIE,Classic Triple,Gender Inclusive,45,3/3/2025 14:00
+Rieber Hall,RIE,Classic Triple,Male,347,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Private Bath,Female,0,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Private Bath,Male,0,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Private Bath,Non-Binary,0,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Shared Bath,Female,69,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Shared Bath,Gender Inclusive,25,3/3/2025 14:00
+Rieber Terrace,RT,Plaza Triple/Shared Bath,Male,32,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Private Bath,Female,0,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Private Bath,Male,0,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Shared Bath,Female,136,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Shared Bath,Gender Inclusive,22,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Shared Bath,Male,114,3/3/2025 14:00
+Rieber Vista,RV,Plaza Triple/Shared Bath,Non-Binary,3,3/3/2025 14:00
+Saxon Suites,SAX,Suite Triple/Shared Bath,Female,18,3/3/2025 14:00
+Saxon Suites,SAX,Suite Triple/Shared Bath,Gender Inclusive,0,3/3/2025 14:00
+Saxon Suites,SAX,Suite Triple/Shared Bath,Male,0,3/3/2025 14:00
+Sproul Landing / Cove,SLC,Deluxe Triple,Female,19,3/3/2025 14:00
+Sproul Landing / Cove,SLC,Deluxe Triple,Gender Inclusive,5,3/3/2025 14:00
+Sproul Landing / Cove,SLC,Deluxe Triple,Male,0,3/3/2025 14:00
+Sproul Landing / Cove,SLC,Deluxe Triple,Non-Binary,0,3/3/2025 14:00
+Sproul Landing / Cove,SLC,Deluxe Triple,Other,0,3/3/2025 14:00
+Hedrick Summit,SMT,Plaza Triple/Shared Bath,Female,373,3/3/2025 14:00
+Hedrick Summit,SMT,Plaza Triple/Shared Bath,Gender Inclusive,30,3/3/2025 14:00
+Hedrick Summit,SMT,Plaza Triple/Shared Bath,Male,235,3/3/2025 14:00
+Sproul Hall,SPR,Classic Triple,Female,246,3/3/2025 14:00
+Sproul Hall,SPR,Classic Triple,Gender Inclusive,37,3/3/2025 14:00
+Sproul Hall,SPR,Classic Triple,Male,167,3/3/2025 14:00
+Sproul Hall,SPR,Classic Triple,Non-Binary,0,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Private Bath,Female,129,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Private Bath,Gender Inclusive,10,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Private Bath,Male,17,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Private Bath,Non-Binary,2,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Shared Bath,Female,153,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Shared Bath,Gender Inclusive,9,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Shared Bath,Male,112,3/3/2025 14:00
+Sunset Village,SV,Plaza Triple/Shared Bath,Non-Binary,5,3/3/2025 14:00
+Gayley Court Apartments,GC,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Gayley Court Apartments,GC,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Gayley Court Apartments,GC,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Gayley Court Apartments,GC,2 Bd/4 Person,Non-Binary,0,3/3/2025 14:00
+Gayley Heights,GH,1 Bd/3 Person,Female,0,3/3/2025 14:00
+Gayley Heights,GH,1 Bd/3 Person,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,1 Bd/3 Person,Male,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/5 Person-Double,Female,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/5 Person-Double,Male,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/5 Person-Triple,Female,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/5 Person-Triple,Male,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/6 Person,Female,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/6 Person,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/6 Person,Male,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Quad,Female,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Quad,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Quad,Male,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Triple,Female,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,2 Bd/7 Person-Triple,Male,0,3/3/2025 14:00
+Gayley Heights,GH,3 Bd/8 Person-Double,Female,0,3/3/2025 14:00
+Gayley Heights,GH,3 Bd/8 Person-Double,Male,0,3/3/2025 14:00
+Gayley Heights,GH,3 Bd/8 Person-Triple,Female,0,3/3/2025 14:00
+Gayley Heights,GH,3 Bd/8 Person-Triple,Male,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Double,Female,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Double,Male,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Triple,Female,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Gayley Heights,GH,4 Bd/10 Person-Triple,Male,0,3/3/2025 14:00
+Glenrock Apartments,GR,2 Bd/3 Person-Double,Female,0,3/3/2025 14:00
+Glenrock Apartments,GR,2 Bd/3 Person-Double,Male,0,3/3/2025 14:00
+Glenrock Apartments,GR,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Glenrock Apartments,GR,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Glenrock Apartments,GR,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Glenrock West Apartments,GW,1 Bd/3 Person,Female,0,3/3/2025 14:00
+Glenrock West Apartments,GW,1 Bd/3 Person,Gender Inclusive,0,3/3/2025 14:00
+Glenrock West Apartments,GW,1 Bd/3 Person,Male,0,3/3/2025 14:00
+Glenrock West Apartments,GW,1 Bd/3 Person,Non-Binary,1,3/3/2025 14:00
+Glenrock West Apartments,GW,2 Bd/3 Person-Double,Female,0,3/3/2025 14:00
+Glenrock West Apartments,GW,2 Bd/3 Person-Double,Male,0,3/3/2025 14:00
+Glenrock West Apartments,GW,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Glenrock West Apartments,GW,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Glenrock West Apartments,GW,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Laurel,LA,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Laurel,LA,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Laurel,LA,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Laurel,LA,2 Bd/4 Person,Non-Binary,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Double,Female,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Double,Male,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Double,Non-Binary,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Triple,Female,37,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Triple,Male,73,3/3/2025 14:00
+Laurel,LA,4 Bd/10 Person-Triple,Non-Binary,4,3/3/2025 14:00
+Landfair Apartments,LF,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Landfair Apartments,LF,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Landfair Apartments,LF,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,1 Bd/3 Person,Female,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,1 Bd/3 Person,Male,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/7 Person-Quad,Female,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/7 Person-Quad,Male,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/7 Person-Triple,Female,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/7 Person-Triple,Male,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/8 Person,Female,1,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/8 Person,Gender Inclusive,0,3/3/2025 14:00
+Levering Terrace Apartments,LT,2 Bd/8 Person,Male,7,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd+Loft/5 Person-Double,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd+Loft/6 Person,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd+Loft/6 Person,Male,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/5 Person-Double,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/5 Person-Double,Male,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/5 Person-Triple,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,2 Bd/5 Person-Triple,Male,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,3 Bd+Loft/9 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,3 Bd+Loft/9 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,3 Bd/6 Person,Female,0,3/3/2025 14:00
+Landfair Vista Apartments,LV,3 Bd/6 Person,Male,0,3/3/2025 14:00
+Palo Verde,PV,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Palo Verde,PV,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Double,Female,0,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Double,Male,0,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Triple,Female,30,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Palo Verde,PV,4 Bd/10 Person-Triple,Male,42,3/3/2025 14:00
+Tipuana,TN,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Tipuana,TN,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Tipuana,TN,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Double,Female,1,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Double,Male,0,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Triple,Female,37,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Triple,Gender Inclusive,0,3/3/2025 14:00
+Tipuana,TN,4 Bd/10 Person-Triple,Male,108,3/3/2025 14:00
+Westwood Chateau Apartments,WC,1 Bd/3 Person,Female,0,3/3/2025 14:00
+Westwood Chateau Apartments,WC,1 Bd/3 Person,Male,0,3/3/2025 14:00
+Westwood Chateau Apartments,WC,1 Bd/3 Person,Non-Binary,0,3/3/2025 14:00
+Westwood Chateau Apartments,WC,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Westwood Chateau Apartments,WC,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Westwood Chateau Apartments,WC,2 Bd/4 Person,Male,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,1 Bd/3 Person,Female,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/3 Person-Double,Female,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/3 Person-Double,Gender Inclusive,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/3 Person-Double,Male,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/4 Person,Female,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/4 Person,Gender Inclusive,0,3/3/2025 14:00
+Westwood Palms Apartments,WP,2 Bd/4 Person,Male,0,3/3/2025 14:00

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCLA Housing Availability Over Time</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #2774AE;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .article-text {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .toggle-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .radio-label input {
+            margin-right: 8px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+        }
+        
+        .selected-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .selected-item {
+            background: #2774AE;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .remove-btn {
+            background: rgba(255,255,255,0.3);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+        }
+        
+        .remove-btn:hover {
+            background: rgba(255,255,255,0.5);
+        }
+        
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        
+        .pill-button {
+            padding: 8px 16px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .pill-button:hover {
+            border-color: #2774AE;
+            background: #f0f7ff;
+        }
+        
+        .pill-button.active {
+            background: #2774AE;
+            color: white;
+            border-color: #2774AE;
+        }
+        
+        #chart {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .line {
+            fill: none;
+            stroke-width: 2.5;
+        }
+        
+        .axis {
+            font-size: 12px;
+        }
+        
+        .axis-label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .legend {
+            font-size: 13px;
+        }
+        
+        .legend-item {
+            cursor: pointer;
+        }
+        
+        .legend-item:hover {
+            opacity: 0.7;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .grid line {
+            stroke: #e0e0e0;
+            stroke-opacity: 0.7;
+        }
+        
+        .grid path {
+            stroke-width: 0;
+        }
+
+        /* Helper to cue user that zooming is available */
+        .zoom-hint {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>UCLA Housing Availability Over Time</h1>
+    <p class="subtitle">Track how quickly different housing options fill up</p>
+    
+    <div class="article-text">
+        <p>Available bed spaces in UCLA housing dropped dramatically between mid-February and early March 2025. You can toggle between absolute beds and normalized percentages.</p>
+        
+        <p>Select different combinations below to compare availability trends.</p>
+    </div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>Data View:</label>
+            <div class="toggle-container">
+                <label class="radio-label">
+                    <input type="radio" name="viewMode" value="normalized" checked> 
+                    Normalized (Percent Left)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="viewMode" value="absolute"> 
+                    Absolute (Number of Beds)
+                </label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Housing Type:</label>
+            <div class="pill-container" id="housing-type-filters">
+                <!-- Housing type pill buttons will be generated here -->
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Filter By:</label>
+            <div class="pill-container" id="gender-filters">
+                <!-- Gender pill buttons will be generated here -->
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label for="building-select">Building:</label>
+            <select id="building-select">
+                <option value="">All Buildings</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="combo-select">Add to Chart:</label>
+            <select id="combo-select">
+                <option value="">Select a housing option...</option>
+            </select>
+        </div>
+        
+        <div class="selected-items" id="selected-items"></div>
+    </div>
+    
+    <div id="chart"></div>
+    <div class="zoom-hint">Tip: Scroll to zoom the timeline, drag to pan left/right.</div>
+    
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Color palette
+        const colors = ['#2774AE', '#FFD100', '#FF6B35', '#004E89', '#8B1A1A', '#00A84F', '#9B59B6', '#E67E22', '#1ABC9C', '#34495E'];
+        
+        let housingData = {};
+        let selectedCombos = [];
+        let currentMode = 'normalized';
+        let selectedGenders = [];
+        let selectedBuilding = '';
+        let selectedHousingTypes = ['On-Campus', 'University Apartments'];
+        
+        // Gender mapping for display
+        const genderMap = {
+            'Female': 'Female',
+            'Male': 'Male',
+            'Gender Inclusive': 'Inclusive',
+            'Non-Binary': 'NB',
+            'Other': 'Other'
+        };
+
+        // Housing type categorization
+        const onCampusBuildings = [
+            'De Neve Plaza',
+            'De Neve Residence Hall',
+            'Dykstra Hall',
+            'Hedrick Hall',
+            'Hitch Suites',
+            'Olympic / Centennial',
+            'Rieber Hall',
+            'Rieber Terrace',
+            'Rieber Vista',
+            'Saxon Suites',
+            'Sproul Landing / Cove',
+            'Hedrick Summit',
+            'Sproul Hall',
+            'Sunset Village'
+        ];
+
+        const universityApartments = [
+            'Gayley Court Apartments',
+            'Gayley Heights',
+            'Glenrock Apartments',
+            'Glenrock West Apartments',
+            'Laurel',
+            'Landfair Apartments',
+            'Levering Terrace Apartments',
+            'Landfair Vista Apartments',
+            'Palo Verde',
+            'Tipuana',
+            'Westwood Chateau Apartments',
+            'Westwood Palms Apartments'
+        ];
+
+        function getHousingType(building) {
+            if (onCampusBuildings.includes(building)) {
+                return 'On-Campus';
+            } else if (universityApartments.includes(building)) {
+                return 'University Apartments';
+            }
+            return null;
+        }
+        
+        // Chart dimensions
+        const margin = {top: 20, right: 150, bottom: 60, left: 60};
+        const width = 1100 - margin.left - margin.right;
+        const height = 500 - margin.top - margin.bottom;
+        
+        // Load data
+        d3.json('housing_data.json').then(data => {
+            housingData = data;
+            initializeFilters();
+            populateDropdown();
+        });
+
+        d3.selectAll('input[name="viewMode"]').on('change', function() {
+            currentMode = this.value;
+            updateChart();
+        });
+        
+        function initializeFilters() {
+            const keys = Object.keys(housingData['absolute'] || {});
+            
+            // Extract unique genders and buildings
+            const genders = new Set();
+            const buildings = new Set();
+            
+            keys.forEach(key => {
+                const parts = key.split('_');
+                if (parts.length >= 2) {
+                    buildings.add(parts[0]);
+                    genders.add(parts[1]);
+                }
+            });
+            
+            // Create housing type filter pills
+            const housingTypeFilters = d3.select('#housing-type-filters');
+            housingTypeFilters.html('');
+            
+            ['On-Campus', 'University Apartments'].forEach(housingType => {
+                const pill = housingTypeFilters.append('button')
+                    .attr('class', 'pill-button')
+                    .attr('data-housing-type', housingType)
+                    .text(housingType)
+                    .classed('active', selectedHousingTypes.includes(housingType))
+                    .on('click', function() {
+                        const housingTypeValue = this.getAttribute('data-housing-type');
+                        const isActive = d3.select(this).classed('active');
+                        
+                        if (isActive) {
+                            selectedHousingTypes = selectedHousingTypes.filter(t => t !== housingTypeValue);
+                            d3.select(this).classed('active', false);
+                        } else {
+                            selectedHousingTypes.push(housingTypeValue);
+                            d3.select(this).classed('active', true);
+                        }
+                        
+                        updateBuildingDropdown();
+                        populateDropdown();
+                    });
+            });
+            
+            // Create gender filter pills
+            const genderFilters = d3.select('#gender-filters');
+            genderFilters.html('');
+            
+            Array.from(genders).sort().forEach(gender => {
+                const displayName = genderMap[gender] || gender;
+                const pill = genderFilters.append('button')
+                    .attr('class', 'pill-button')
+                    .attr('data-gender', gender)
+                    .text(displayName)
+                    .on('click', function() {
+                        const genderValue = this.getAttribute('data-gender');
+                        const isActive = d3.select(this).classed('active');
+                        
+                        if (isActive) {
+                            selectedGenders = selectedGenders.filter(g => g !== genderValue);
+                            d3.select(this).classed('active', false);
+                        } else {
+                            selectedGenders.push(genderValue);
+                            d3.select(this).classed('active', true);
+                        }
+                        
+                        populateDropdown();
+                    });
+            });
+            
+            // Set up building select handler (only once)
+            const buildingSelect = d3.select('#building-select');
+            buildingSelect.on('change.building', function() {
+                selectedBuilding = this.value;
+                populateDropdown();
+            });
+            
+            // Initial population of building dropdown
+            updateBuildingDropdown();
+        }
+        
+        function updateBuildingDropdown() {
+            const keys = Object.keys(housingData['absolute'] || {});
+            
+            // Extract unique buildings
+            const buildings = new Set();
+            keys.forEach(key => {
+                const parts = key.split('_');
+                if (parts.length >= 2) {
+                    buildings.add(parts[0]);
+                }
+            });
+            
+            // Filter buildings by selected housing types
+            let filteredBuildings = Array.from(buildings);
+            if (selectedHousingTypes.length > 0) {
+                filteredBuildings = filteredBuildings.filter(building => {
+                    const housingType = getHousingType(building);
+                    return housingType && selectedHousingTypes.includes(housingType);
+                });
+            }
+            
+            // Populate building dropdown
+            const buildingSelect = d3.select('#building-select');
+            buildingSelect.selectAll('option:not(:first-child)').remove();
+            
+            filteredBuildings.sort().forEach(building => {
+                buildingSelect.append('option')
+                    .attr('value', building)
+                    .text(building);
+            });
+            
+            // If the currently selected building is no longer in the filtered list, clear the selection
+            if (selectedBuilding && !filteredBuildings.includes(selectedBuilding)) {
+                selectedBuilding = '';
+                buildingSelect.property('value', '');
+            }
+        }
+        
+        function populateDropdown() {
+            const select = d3.select('#combo-select');
+            select.selectAll('option:not(:first-child)').remove();
+            
+            let keys = Object.keys(housingData['absolute'] || {}).sort();
+            
+            // Filter by selected housing types
+            if (selectedHousingTypes.length > 0) {
+                keys = keys.filter(key => {
+                    const parts = key.split('_');
+                    if (parts.length < 1) return false;
+                    const building = parts[0];
+                    const housingType = getHousingType(building);
+                    return housingType && selectedHousingTypes.includes(housingType);
+                });
+            }
+            
+            // Filter by selected genders
+            if (selectedGenders.length > 0) {
+                keys = keys.filter(key => {
+                    const parts = key.split('_');
+                    return parts.length >= 2 && selectedGenders.includes(parts[1]);
+                });
+            }
+            
+            // Filter by selected building
+            if (selectedBuilding) {
+                keys = keys.filter(key => {
+                    const parts = key.split('_');
+                    return parts.length >= 1 && parts[0] === selectedBuilding;
+                });
+            }
+            
+            keys.forEach(key => {
+                const parts = key.split('_');
+                const building = parts[0];
+                const gender = parts[1];
+                const roomType = parts.slice(2).join(' ');
+                // Always show Building - Gender - Room Type for clarity
+                const displayName = `${building} - ${gender} - ${roomType}`;
+                
+                select.append('option')
+                    .attr('value', key)
+                    .text(displayName);
+            });
+        }
+        
+        d3.select('#combo-select').on('change', function() {
+            const selected = this.value;
+            if (selected && !selectedCombos.includes(selected)) {
+                selectedCombos.push(selected);
+                updateSelectedItems();
+                updateChart();
+            }
+            this.value = '';
+        });
+        
+        function updateSelectedItems() {
+            const container = d3.select('#selected-items');
+            container.html('');
+            
+            selectedCombos.forEach((combo, i) => {
+                const parts = combo.split('_');
+                const displayName = `${parts[0]} - ${parts[1]} - ${parts.slice(2).join(' ')}`;
+                
+                const item = container.append('div')
+                    .attr('class', 'selected-item')
+                    .style('background', colors[i % colors.length]);
+                
+                item.append('span').text(displayName);
+                
+                item.append('button')
+                    .attr('class', 'remove-btn')
+                    .text('×')
+                    .on('click', () => {
+                        selectedCombos = selectedCombos.filter(c => c !== combo);
+                        updateSelectedItems();
+                        updateChart();
+                    });
+            });
+        }
+        
+        function updateChart() {
+            d3.select('#chart').html('');
+            
+            if (selectedCombos.length === 0) return;
+            
+            const svg = d3.select('#chart')
+                .append('svg')
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+            
+            // --- 1. Clipping Definition ---
+            // This prevents lines from drawing outside the axes when zoomed
+            svg.append("defs").append("clipPath")
+                .attr("id", "clip")
+                .append("rect")
+                .attr("width", width)
+                .attr("height", height);
+
+            const parseDate = d3.timeParse('%Y-%m-%dT%H:%M:%S');
+            
+            const allData = selectedCombos.map(combo => {
+                const dataSubset = housingData[currentMode][combo];
+                if (!dataSubset) return [];
+                return dataSubset.map(d => ({
+                    date: parseDate(d.date),
+                    value: d.value,
+                    combo: combo
+                }));
+            });
+            
+            const validData = allData.filter(d => d.length > 0);
+            if (validData.length === 0) return;
+
+            // --- Scales ---
+            // Store the original domain for zoom constraints
+            const xDomainOriginal = [
+                d3.min(validData, d => d3.min(d, p => p.date)),
+                d3.max(validData, d => d3.max(d, p => p.date))
+            ];
+            
+            const x = d3.scaleTime()
+                .domain(xDomainOriginal)
+                .range([0, width]);
+            
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(validData, d => d3.max(d, p => p.value))])
+                .nice()
+                .range([height, 0]);
+            
+            // --- Smart time formatter function ---
+            // Shows time when zoomed in (domain < 2 days), otherwise just date
+            function smartTimeFormat(domain) {
+                const domainRange = domain[1] - domain[0];
+                const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
+                
+                if (domainRange < 2 * oneDay) {
+                    // Zoomed in: show date and time
+                    return d3.timeFormat('%b %d %I:%M %p');
+                } else {
+                    // Zoomed out: show just date
+                    return d3.timeFormat('%b %d');
+                }
+            }
+            
+            // --- Axes Groups ---
+            // We store the x-axis in a variable so we can update it during zoom
+            const xAxis = svg.append('g')
+                .attr('class', 'axis x-axis')
+                .attr('transform', `translate(0,${height})`)
+                .call(d3.axisBottom(x)
+                    .ticks(8)
+                    .tickFormat(smartTimeFormat(x.domain())));
+            
+            const yAxis = svg.append('g')
+                .attr('class', 'axis')
+                .call(d3.axisLeft(y));
+            
+            // Grid
+            svg.append('g')
+                .attr('class', 'grid')
+                .call(d3.axisLeft(y)
+                    .tickSize(-width)
+                    .tickFormat('')
+                );
+
+            // Axis labels
+            const yLabelText = currentMode === 'normalized' ? 'Percentage Left (%)' : 'Available Bed Spaces';
+            
+            svg.append('text')
+                .attr('class', 'axis-label')
+                .attr('text-anchor', 'middle')
+                .attr('x', width / 2)
+                .attr('y', height + 45)
+                .text('Date');
+            
+            svg.append('text')
+                .attr('class', 'axis-label')
+                .attr('text-anchor', 'middle')
+                .attr('transform', 'rotate(-90)')
+                .attr('x', -height / 2)
+                .attr('y', -45)
+                .text(yLabelText);
+            
+            // --- Line Generator ---
+            const line = d3.line()
+                .x(d => x(d.date))
+                .y(d => y(d.value));
+            
+            // --- Chart Content Group ---
+            // Everything that needs to be zoomed goes in here
+            const chartBody = svg.append("g")
+                .attr("clip-path", "url(#clip)");
+            
+            // --- 2. Zoom Logic ---
+            const zoom = d3.zoom()
+                .scaleExtent([1, 20]) // Allow zooming in up to 20x
+                .extent([[0, 0], [width, height]])
+                .on("zoom", zoomed)
+                .filter(function(event) {
+                    // Only allow zoom on wheel events or when not over interactive elements
+                    // This allows hover events to work on dots
+                    if (event.type === "wheel") return true;
+                    if (event.type === "mousedown") return true;
+                    // For mousemove, only allow if it's part of a drag (button pressed)
+                    if (event.type === "mousemove") return event.buttons > 0;
+                    return false;
+                });
+
+            // Add an invisible rectangle at SVG level to catch zoom events
+            // Append before chartBody so chartBody content (dots) are on top visually
+            const zoomRect = svg.insert("rect", "g") // Insert before first g (chartBody)
+                .attr("width", width)
+                .attr("height", height)
+                .style("fill", "none")
+                .style("pointer-events", "all")
+                .style("cursor", "grab")
+                .call(zoom);
+
+            // Draw Lines
+            const lines = chartBody.selectAll('.line')
+                .data(validData)
+                .enter()
+                .append('path')
+                .attr('class', 'line')
+                .attr('d', line)
+                .style('stroke', (d, i) => colors[i % colors.length]);
+                
+            // Draw Dots
+            const dotsGroups = chartBody.selectAll('.dots-group')
+                .data(validData)
+                .enter()
+                .append('g')
+                .attr('class', 'dots-group');
+                
+            // Create invisible larger hit areas for easier hovering
+            const hitAreas = dotsGroups.selectAll('circle.hit-area')
+                .data((d, i) => d.map(point => ({...point, colorIndex: i})))
+                .enter()
+                .append('circle')
+                .attr('class', 'hit-area')
+                .attr('cx', d => x(d.date))
+                .attr('cy', d => y(d.value))
+                .attr('r', 8) // Larger invisible hit area
+                .attr('fill', 'transparent')
+                .style('pointer-events', 'all')
+                .style('cursor', 'pointer')
+                .on('mouseover', function(event, d) {
+                    event.stopPropagation();
+                    // Find and highlight the corresponding visible dot
+                    const visibleDot = d3.select(this.parentNode).select(`circle.visible-dot[data-index="${d.colorIndex}"][data-point="${d.combo}_${d.date.getTime()}"]`);
+                    visibleDot.style('opacity', 1);
+                    const tooltip = d3.select('#tooltip');
+                    const unit = currentMode === 'normalized' ? '%' : ' beds';
+                    
+                    tooltip.style('opacity', 1)
+                        .html(`<strong>${d.combo.split('_').join(' - ')}</strong><br/>
+                               Date: ${d3.timeFormat('%b %d, %Y %I:%M %p')(d.date)}<br/>
+                               ${currentMode === 'normalized' ? 'Remaining' : 'Available'}: ${d.value.toFixed(1)}${unit}`);
+                })
+                .on('mousemove', function(event) {
+                    event.stopPropagation();
+                    d3.select('#tooltip')
+                        .style('left', (event.pageX + 10) + 'px')
+                        .style('top', (event.pageY - 10) + 'px');
+                })
+                .on('mouseout', function(event, d) {
+                    event.stopPropagation();
+                    // Find and hide the corresponding visible dot
+                    const visibleDot = d3.select(this.parentNode).select(`circle.visible-dot[data-index="${d.colorIndex}"][data-point="${d.combo}_${d.date.getTime()}"]`);
+                    visibleDot.style('opacity', 0);
+                    d3.select('#tooltip').style('opacity', 0);
+                });
+            
+            const dots = dotsGroups.selectAll('circle.visible-dot')
+                .data((d, i) => d.map(point => ({...point, colorIndex: i}))) // Pass index for color
+                .enter()
+                .append('circle')
+                .attr('class', 'visible-dot')
+                .attr('data-index', d => d.colorIndex)
+                .attr('data-point', d => `${d.combo}_${d.date.getTime()}`)
+                .attr('cx', d => x(d.date))
+                .attr('cy', d => y(d.value))
+                .attr('r', 3)
+                .attr('fill', d => colors[d.colorIndex % colors.length])
+                .style('opacity', 0)
+                .style('pointer-events', 'none'); // Let hit areas handle events
+
+            function zoomed(event) {
+                // Create new scale based on zoom transform
+                let newX = event.transform.rescaleX(x);
+                let newDomain = newX.domain();
+                
+                // Constrain the domain to not go beyond the original data bounds
+                const domainWidth = newDomain[1] - newDomain[0];
+                const originalWidth = xDomainOriginal[1] - xDomainOriginal[0];
+                const scale = event.transform.k;
+                let constrainedTransform = event.transform;
+                
+                // Prevent zooming out beyond original domain
+                if (domainWidth >= originalWidth) {
+                    constrainedTransform = d3.zoomIdentity;
+                    newX = x;
+                    newDomain = xDomainOriginal;
+                } 
+                // Constrain panning to keep domain within bounds
+                else {
+                    // Calculate the translateX bounds that keep the domain within the original range
+                    // Minimum translateX (when left edge is at original left edge)
+                    const minTranslateX = -x(xDomainOriginal[0]) * scale;
+                    // Maximum translateX (when right edge is at original right edge)
+                    const maxTranslateX = width - x(xDomainOriginal[1]) * scale;
+                    
+                    // Clamp translateX to the valid range
+                    let translateX = Math.max(minTranslateX, Math.min(maxTranslateX, event.transform.x));
+                    
+                    // If we had to constrain, create the constrained transform
+                    if (translateX !== event.transform.x) {
+                        constrainedTransform = d3.zoomIdentity
+                            .scale(scale)
+                            .translate(translateX, event.transform.y);
+                        newX = constrainedTransform.rescaleX(x);
+                        newDomain = newX.domain();
+                    }
+                }
+                
+                // Apply constrained transform if it differs from the event transform
+                if (constrainedTransform !== event.transform && 
+                    (Math.abs(constrainedTransform.x - event.transform.x) > 0.1 || 
+                     Math.abs(constrainedTransform.k - event.transform.k) > 0.001)) {
+                    // Temporarily disable zoom handler to prevent recursion
+                    zoom.on("zoom", null);
+                    zoomRect.call(zoom.transform, constrainedTransform);
+                    zoom.on("zoom", zoomed);
+                }
+                
+                // Update axis with smart formatter based on current domain
+                xAxis.call(d3.axisBottom(newX).ticks(8).tickFormat(smartTimeFormat(newDomain)));
+                
+                // Update lines
+                lines.attr("d", d3.line()
+                    .x(d => newX(d.date))
+                    .y(d => y(d.value))
+                );
+                
+                // Update dots and hit areas
+                dots.attr('cx', d => newX(d.date));
+                chartBody.selectAll('circle.hit-area').attr('cx', d => newX(d.date));
+            }
+
+            // --- Legend ---
+            const legend = svg.append('g')
+                .attr('class', 'legend')
+                .attr('transform', `translate(${width + 20}, 0)`);
+            
+            selectedCombos.forEach((combo, i) => {
+                const parts = combo.split('_');
+                const displayName = `${parts[0]}\n${parts[1]}\n${parts.slice(2).join(' ')}`;
+                
+                const legendItem = legend.append('g')
+                    .attr('class', 'legend-item')
+                    .attr('transform', `translate(0, ${i * 70})`);
+                
+                legendItem.append('line')
+                    .attr('x1', 0)
+                    .attr('x2', 20)
+                    .attr('y1', 0)
+                    .attr('y2', 0)
+                    .style('stroke', colors[i % colors.length])
+                    .style('stroke-width', 3);
+                
+                const text = legendItem.append('text')
+                    .attr('x', 25)
+                    .attr('y', 0)
+                    .style('font-size', '11px');
+                
+                displayName.split('\n').forEach((line, j) => {
+                    text.append('tspan')
+                        .attr('x', 25)
+                        .attr('dy', j === 0 ? 0 : '1.1em')
+                        .text(line);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

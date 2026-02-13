@@ -1,0 +1,155 @@
+List of On-Campus Housing Locations:
+De Neve Plaza
+De Neve Residence Hall
+Dykstra Hall
+Hedrick Hall
+Hitch Suites
+Olympic / Centennial
+Rieber Hall
+Rieber Terrace
+Rieber Vista
+Saxon Suites
+Sproul Landing / Cove
+Hedrick Summit
+Sproul Hall
+Sunset Village
+
+List of University Apartments:
+Gayley Court Apartments
+Gayley Heights
+Glenrock Apartments
+Glenrock West Apartments
+Laurel
+Landfair Apartments
+Levering Terrace Apartments
+Landfair Vista Apartments
+Palo Verde
+Tipuana
+Westwood Chateau Apartments
+Westwood Palms Apartments
+
+
+Total Availability over time:
+17514  2025-02-18 09:00:00.000000
+16970  2025-02-18 10:00:00.000000
+16453  2025-02-18 11:00:00.000000
+15907  2025-02-18 12:00:00.000000
+15265  2025-02-18 13:00:00.000000
+14734  2025-02-18 14:00:00.000000
+14311  2025-02-18 15:00:00.000000
+14122  2025-02-18 16:00:00.000000
+14122  2025-02-19 09:00:00.000000
+13673  2025-02-19 10:01:00.000000
+13324  2025-02-19 11:01:00.000000
+13015  2025-02-19 12:01:00.000000
+12705  2025-02-19 13:01:00.000000
+12364  2025-02-19 14:01:00.000000
+12150  2025-02-19 15:01:00.000000
+11994  2025-02-19 16:01:00.000000
+11725  2025-02-20 10:02:00.000000
+11314  2025-02-20 11:02:00.000000
+10943  2025-02-20 12:02:00.000000
+10612  2025-02-20 13:02:00.000000
+10304  2025-02-20 14:03:00.000000
+9981  2025-02-20 15:03:00.000000
+9854  2025-02-20 16:03:00.000000
+9677  2025-02-21 10:00:00.000000
+9303  2025-02-21 11:00:00.000000
+8824  2025-02-21 12:00:00.000000
+8357  2025-02-21 13:00:00.000000
+7874  2025-02-21 14:00:00.000000
+7446  2025-02-21 15:00:00.000000
+7254  2025-02-21 16:00:00.000000
+6873  2025-02-24 10:00:00.000000
+6469  2025-02-24 11:00:00.000000
+6064  2025-02-24 12:00:00.000000
+5756  2025-02-24 13:00:00.000000
+5442  2025-02-24 14:00:00.000000
+5230  2025-02-24 15:00:00.000000
+5165  2025-02-24 16:00:00.000000
+5155  2025-03-03 10:00:00.000000
+5142  2025-03-03 11:00:00.000000
+5128  2025-03-03 12:00:00.000000
+5109  2025-03-03 13:00:00.000000
+5083  2025-03-03 14:00:00.000000
+5035  2025-03-03 16:00:00.000000
+5023  2025-03-04 10:01:00.000000
+5010  2025-03-04 11:01:00.000000
+4999  2025-03-04 12:01:00.000000
+4993  2025-03-04 13:01:00.000000
+4989  2025-03-04 14:01:00.000000
+4973  2025-03-04 15:01:00.000000
+
+Crosses the effective 50% between:
+2025-02-20 11:02:00 -- 2025-02-20 12:02:00
+
+
+                       Building   First_Time_Over_80_Filled
+0           Landfair Apartments  2025-02-18 11:00:00.000000
+1     Landfair Vista Apartments  2025-02-18 11:00:00.000000
+2      Glenrock West Apartments  2025-02-18 12:00:00.000000
+3           Glenrock Apartments  2025-02-18 13:00:00.000000
+4       Gayley Court Apartments  2025-02-18 14:00:00.000000
+5   Westwood Chateau Apartments  2025-02-18 14:00:00.000000
+6     Westwood Palms Apartments  2025-02-18 14:00:00.000000
+7                Gayley Heights  2025-02-19 10:01:00.000000
+8   Levering Terrace Apartments  2025-02-19 16:01:00.000000
+9                        Laurel  2025-02-21 11:00:00.000000
+10                 Saxon Suites  2025-02-21 11:00:00.000000
+11        Sproul Landing / Cove  2025-02-21 11:00:00.000000
+12                      Tipuana  2025-02-21 13:00:00.000000
+13         Olympic / Centennial  2025-02-21 15:00:00.000000
+14       De Neve Residence Hall  2025-02-24 12:00:00.000000
+15                   Palo Verde  2025-02-24 13:00:00.000000
+16               Rieber Terrace  2025-02-24 14:00:00.000000
+17                De Neve Plaza  2025-03-03 13:00:00.000000
+
+                      Building   First_Time_Completely_Filled
+0    Landfair Vista Apartments  2025-02-18 15:00:00.000000
+1          Landfair Apartments  2025-02-18 16:00:00.000000
+2          Glenrock Apartments  2025-02-19 10:01:00.000000
+3  Westwood Chateau Apartments  2025-02-19 10:01:00.000000
+4    Westwood Palms Apartments  2025-02-19 10:01:00.000000
+5      Gayley Court Apartments  2025-02-19 13:01:00.000000
+6               Gayley Heights  2025-02-19 14:01:00.000000
+7  Levering Terrace Apartments  2025-03-04 10:01:00.000000
+
+By Room Type 80% Cap
+0          2 Bd+Loft/6 Person  2025-02-18 10:00:00.000000
+1        2 Bd/5 Person-Double  2025-02-18 11:00:00.000000
+2               3 Bd/6 Person  2025-02-18 11:00:00.000000
+3        2 Bd/5 Person-Triple  2025-02-18 12:00:00.000000
+4   3 Bd+Loft/9 Person-Double  2025-02-18 12:00:00.000000
+5               2 Bd/4 Person  2025-02-18 13:00:00.000000
+6   3 Bd+Loft/9 Person-Triple  2025-02-18 13:00:00.000000
+7        3 Bd/8 Person-Double  2025-02-18 13:00:00.000000
+8               1 Bd/3 Person  2025-02-18 14:00:00.000000
+9   2 Bd+Loft/5 Person-Double  2025-02-18 15:00:00.000000
+10       2 Bd/3 Person-Double  2025-02-18 15:00:00.000000
+11              2 Bd/6 Person  2025-02-18 15:00:00.000000
+12       2 Bd/7 Person-Triple  2025-02-19 10:01:00.000000
+13       3 Bd/8 Person-Triple  2025-02-19 10:01:00.000000
+14         2 Bd/7 Person-Quad  2025-02-19 12:01:00.000000
+15      4 Bd/10 Person-Double  2025-02-19 14:01:00.000000
+16              2 Bd/8 Person  2025-02-20 11:02:00.000000
+17              Deluxe Triple  2025-02-21 15:00:00.000000
+18   Suite Triple/Shared Bath  2025-02-24 11:00:00.000000
+19  Plaza Triple/Private Bath  2025-02-24 16:00:00.000000
+
+BY room type 100% Cap:
+0          2 Bd+Loft/6 Person  2025-02-18 10:00:00.000000
+1   3 Bd+Loft/9 Person-Double  2025-02-18 12:00:00.000000
+2               3 Bd/6 Person  2025-02-18 12:00:00.000000
+3        2 Bd/5 Person-Double  2025-02-18 13:00:00.000000
+4   3 Bd+Loft/9 Person-Triple  2025-02-18 13:00:00.000000
+5        3 Bd/8 Person-Double  2025-02-18 13:00:00.000000
+6   2 Bd+Loft/5 Person-Double  2025-02-18 15:00:00.000000
+7        2 Bd/5 Person-Triple  2025-02-18 16:00:00.000000
+8        2 Bd/3 Person-Double  2025-02-19 10:01:00.000000
+9               2 Bd/6 Person  2025-02-19 11:01:00.000000
+10       3 Bd/8 Person-Triple  2025-02-19 11:01:00.000000
+11              2 Bd/4 Person  2025-02-19 13:01:00.000000
+12       2 Bd/7 Person-Triple  2025-02-19 13:01:00.000000
+13         2 Bd/7 Person-Quad  2025-02-19 14:01:00.000000
+14      4 Bd/10 Person-Double  2025-02-21 11:00:00.000000
+15              2 Bd/8 Person  2025-03-04 10:01:00.000000

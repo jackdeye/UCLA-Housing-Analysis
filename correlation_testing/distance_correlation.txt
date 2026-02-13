@@ -1,0 +1,85 @@
+--- Analysis: On-Campus Housing ---
+Total Locations: 14
+Locations filled: 5
+Spearman Correlation (Distance to Campus Edge): -0.2485
+Spearman Correlation (Distance to Centroid):    -0.2997
+>> Stronger Predictor: Distance to Centroid
+----------------------------------------
+
+Processing University Apartments Data...
+--- Analysis: University Apartments ---
+Total Locations: 11
+Locations filled: 10
+Spearman Correlation (Distance to Campus Edge): 0.2551
+Spearman Correlation (Distance to Centroid):    0.5558
+>> Stronger Predictor: Distance to Centroid
+----------------------------------------
+
+
+--- Renovation Impact Analysis ---
+                  Location  ...  Fill_Rank
+4             Saxon Suites  ...        1.5
+12   Sproul Landing / Cove  ...        1.5
+13    Olympic / Centennial  ...        3.0
+11  De Neve Residence Hall  ...        4.0
+10          Rieber Terrace  ...        5.0
+7            De Neve Plaza  ...        6.0
+0                  Dykstra  ...       10.5
+1              Sproul Hall  ...       10.5
+6           Sunset Village  ...       10.5
+5             Hitch Suites  ...       10.5
+2              Rieber Hall  ...       10.5
+3             Hedrick Hall  ...       10.5
+8             Rieber Vista  ...       10.5
+9           Hedrick Summit  ...       10.5
+
+[14 rows x 4 columns]
+
+Spearman Correlation (Year vs. Speed): -0.4090
+>> CONCLUSION: Age is not the primary factor.
+
+Spearman Correlation (Original Build Year vs. Speed): -0.6400
+
+========================================
+List of University Apartments (with roommate calculations):
+Gayley Court Apartments,2.000
+Gayley Heights, 3434/1164 = 2.950
+Glenrock Apartments, 300/150 = 2.000
+Glenrock West Apartments, 231/105 = 2.200
+Laurel, 1887/766 = 2.556
+Landfair Apartments, 328/164 = 2.000
+Levering Terrace Apartments, 1031/269 = 3.833
+Landfair Vista Apartments, 306/144 = 2.125
+Palo Verde, 1090/422 = 2.583
+Tipuana, 2350/926 = 2.538
+Westwood Chateau Apartments, 546/246 = 2.2195
+Westwood Palms Apartments, 177/87 = 2.034
+
+Data Source: time_to_80p_filled_UA.csv
+Locations Analyzed: 12
+Spearman Correlation (Density vs. Fill Order): 0.7211
+------------------------------
+POSITIVE CORRELATION (+)
+Interpretation: As density GOES UP, fill rank GOES UP (later).
+Result: People are AVOIDING crowded rooms.
+
+========================================
+
+The newest, nicest buildings (Laurel, Tipuana, Palo Verde) were the last to be picked. The oldest, "crustiest" buildings (Landfair, 1956) were the first to go.
+--- UA Build Year Analysis ---
+                       Location  Built              Time  Fill_Rank
+7     Landfair Vista Apartments   2014  2025-02-18 11:00        1.5
+5           Landfair Apartments   1956  2025-02-18 11:00        1.5
+3      Glenrock West Apartments   1986  2025-02-18 12:00        3.0
+2           Glenrock Apartments   1958  2025-02-18 13:00        4.0
+0       Gayley Court Apartments   1987  2025-02-18 14:00        6.0
+11    Westwood Palms Apartments   1986  2025-02-18 14:00        6.0
+10  Westwood Chateau Apartments   1986  2025-02-18 14:00        6.0
+1                Gayley Heights   2022  2025-02-19 10:01        8.0
+6   Levering Terrace Apartments   2020  2025-02-19 16:01        9.0
+4                        Laurel   2022  2025-02-21 11:00       10.0
+9                       Tipuana   2022  2025-02-21 13:00       11.0
+8                    Palo Verde   2022  2025-02-24 13:00       12.0
+
+Spearman Correlation (Build Year vs. Speed): 0.8066
+>> CONCLUSION: Newer apartments filled SLOWER (Likely due to distance).

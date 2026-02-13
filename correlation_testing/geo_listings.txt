@@ -1,0 +1,71 @@
+Attempt-1:
+                          Name  dist_to_campus_m  walk_time_min
+21       Gayley Court Apartment        372.803829       4.660048
+26          Landfair Apartments        387.772195       4.847152
+3                        Bplate        478.891950       5.986149
+22               Gayley Heights        483.559975       6.044500
+7                  Dykstra Hall        485.603053       6.070038
+6                       De Neve        491.987376       6.149842
+8                 De Neve Plaza        497.904032       6.223800
+17               Sproul Landing        501.366679       6.267083
+20                  Sproul Hall        508.326186       6.354077
+5                          Epic        508.713629       6.358920
+24          Glenrock Apartments        531.454554       6.643182
+4                         Bcafe        532.759539       6.659494
+9        De Neve Residence Hall        543.803843       6.797548
+27  Levering Terrace Apartments        576.667251       7.208341
+23     Glenrock West Apartments        580.107680       7.251346
+19               Sunset Village        582.157624       7.276970
+2                         Feast        612.142080       7.651776
+30  Westwood Chateau Apartments        626.268047       7.828351
+29                      Tipuana        634.821131       7.935264
+15                  Rieber Hall        637.025595       7.962820
+31    Westwood Palms Apartments        666.578504       8.332231
+25                       Laurel        670.665571       8.383320
+1                         Rende        674.604839       8.432560
+14                 Rieber Vista        688.371706       8.604646
+28                   Palo Verde        692.487745       8.656097
+13               Rieber Terrace        696.373512       8.704669
+0                     The Study        699.299880       8.741248
+10                 Hedrick Hall        719.468185       8.993352
+18               Hedrick Summit        758.638050       9.482976
+16                 Saxon Suites        767.070123       9.588377
+12         Olympic / Centennial        808.811013      10.110138
+11                 Hitch Suites        848.652502      10.608156
+
+
+Attempt-2: Centroid
+3                        Bplate        743.432423       9.292905
+17               Sproul Landing        769.017744       9.612722
+20                  Sproul Hall        770.530075       9.631626
+5                          Epic        772.407029       9.655088
+6                       De Neve        778.112226       9.726403
+7                  Dykstra Hall        785.366277       9.817078
+8                 De Neve Plaza        787.379570       9.842245
+4                         Bcafe        795.426215       9.942828
+9        De Neve Residence Hall        822.493448      10.281168
+19               Sunset Village        855.500065      10.693751
+2                         Feast        877.170322      10.964629
+26          Landfair Apartments        892.841870      11.160523
+15                  Rieber Hall        900.502465      11.256281
+1                         Rende        936.587064      11.707338
+30  Westwood Chateau Apartments        942.056704      11.775709
+21       Gayley Court Apartment        951.095316      11.888691
+14                 Rieber Vista        951.427811      11.892848
+13               Rieber Terrace        958.406726      11.980084
+31    Westwood Palms Apartments        960.727228      12.009090
+0                     The Study        964.347104      12.054339
+10                 Hedrick Hall        984.872189      12.310902
+24          Glenrock Apartments        988.906115      12.361326
+18               Hedrick Summit       1032.202432      12.902530
+23     Glenrock West Apartments       1033.205566      12.915070
+16                 Saxon Suites       1034.574310      12.932179
+22               Gayley Heights       1070.793053      13.384913
+12         Olympic / Centennial       1071.318623      13.391483
+11                 Hitch Suites       1115.062840      13.938285
+27  Levering Terrace Apartments       1163.159927      14.539499
+29                      Tipuana       1218.120818      15.226510
+25                       Laurel       1260.577983      15.757225
+28                   Palo Verde       1273.454120      15.918177
+
+

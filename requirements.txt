@@ -1,0 +1,8 @@
+pandas
+pandasql
+matplotlib
+geopandas
+shapely
+fiona
+seaborn
+statsmodels
