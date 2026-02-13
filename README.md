@@ -144,7 +144,7 @@ Analyzes correlations between geographic distance and housing fill rates.
    - Under "Source", select "Deploy from a branch"
    - Choose "main" (or "master") branch and `/docs` folder
    - Click "Save"
-   - Your site will be available at `https://[YOUR_USERNAME].github.io/box_data/` within a few minutes
+   - Your site will be available at `https://jackdeye.github.io/box_data/` within a few minutes
 
 ### Viewing the Interactive Visualization Locally
 
@@ -220,4 +220,5 @@ This project is provided as-is for educational and research purposes.
 ---
 
 *Data analysis and visualization | February-March 2025*
+
 
