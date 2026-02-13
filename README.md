@@ -13,11 +13,10 @@ This project provides:
 
 ## Live Visualization
 
-The interactive visualization can be hosted on GitHub Pages. After setting up (see instructions below), your site will be available at:
+The interactive visualization can be hosted on GitHub Pages.
 
-**https://[YOUR_USERNAME].github.io/box_data/**
+**https://jackdeye.github.io/UCLA-Housing-Analysis/**
 
-*(Replace [YOUR_USERNAME] with your GitHub username)*
 
 ## Project Structure
 
